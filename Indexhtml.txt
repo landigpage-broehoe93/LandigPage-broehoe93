@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="de">
+ <!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,85 +8,78 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 :root {
-    --primary-color: #ff4500;
-    --bg-dark: #1a1a1a;
+    --primary: #E6D4FF; /* helles Lila */
+    --secondary: #FFF;  /* Weiß */
+    --accent: #FF92C7;  /* Rosa Akzent */
+    --outline-red: #FF0000;
+    --shadow-dark: rgba(0,0,0,0.6);
 }
 
 body {
     font-family: 'Press Start 2P', cursive;
-    background: radial-gradient(circle at 50% 50%, var(--bg-dark), #000);
-    color: #fff;
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+    text-align: center;
 }
 
 h1 {
-    margin-bottom: 40px;
-    font-size: 2em;
-    color: var(--primary-color);
-    text-shadow: 2px 2px #000, 0 0 10px var(--primary-color);
+    font-size: 2.2em;
+    color: var(--primary);
+    text-shadow: 2px 2px var(--shadow-dark), 0 0 10px var(--accent);
+    -webkit-text-stroke: 2px var(--outline-red);
     animation: glow 2s ease-in-out infinite alternate;
+    margin-bottom: 50px;
 }
 
 @keyframes glow {
-    0% { text-shadow: 2px 2px #000, 0 0 5px var(--primary-color); }
-    100% { text-shadow: 2px 2px #000, 0 0 25px var(--primary-color); }
+    0% { text-shadow: 2px 2px var(--shadow-dark), 0 0 5px var(--accent); }
+    100% { text-shadow: 2px 2px var(--shadow-dark), 0 0 25px var(--accent); }
 }
 
 .btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    max-width: 400px;
-    padding: 18px;
-    margin: 15px 0;
+    display: block;
+    width: 90%;
+    max-width: 380px;
+    margin: 15px auto;
+    padding: 18px 25px;
     background: #222;
-    color: #fff;
+    color: var(--secondary);
     text-decoration: none;
     border-radius: 12px;
+    font-weight: bold;
     font-size: 0.9em;
-    gap: 12px;
-    position: relative;
-    overflow: hidden;
+    box-shadow: 0 0 25px var(--primary), 0 0 35px var(--accent) inset;
     transition: all 0.3s ease;
-    box-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color) inset;
 }
 
 .btn:hover {
-    background: var(--primary-color);
-    color: #fff;
-    transform: scale(1.05);
-    box-shadow: 0 0 15px var(--primary-color), 0 0 20px #fff inset;
-    animation: pulse 1s infinite alternate;
-}
-
-@keyframes pulse {
-    0% { box-shadow: 0 0 15px var(--primary-color), 0 0 20px #fff inset; }
-    100% { box-shadow: 0 0 25px var(--primary-color), 0 0 30px #fff inset; }
+    background: var(--accent);
+    transform: scale(1.07);
+    box-shadow: 0 0 35px var(--primary), 0 0 45px var(--accent) inset;
 }
 
 .btn span {
     font-size: 1.2em;
+    margin-right: 10px;
 }
 
 footer {
-    margin-top: 35px;
+    margin-top: 50px;
     font-size: 12px;
     color: #888;
-    text-align: center;
 }
 
 .particle {
     position: absolute;
-    width: 6px;
-    height: 6px;
-    background: var(--primary-color);
+    width: 5px;
+    height: 5px;
+    background: var(--accent);
     border-radius: 50%;
     opacity: 0.6;
     animation: float 5s infinite linear;
@@ -99,28 +92,33 @@ footer {
 </style>
 </head>
 <body>
+
 <h1>Broehoe93 🎮</h1>
 
 <!-- Social Links -->
-<a href="https://twitch.tv/Broehoe93" target="_blank" class="btn" aria-label="Broehoe93 Twitch"><span>🎥</span> Twitch</a>
-<a href="https://www.tiktok.com/@Broehoe93" target="_blank" class="btn" aria-label="Broehoe93 TikTok"><span>🎵</span> TikTok</a>
-<a href="https://youtube.com/@Broehoe93" target="_blank" class="btn" aria-label="Broehoe93 YouTube"><span>▶️</span> YouTube</a>
-<a href="https://www.reddit.com/user/Broehoe93" target="_blank" class="btn" aria-label="Broehoe93 Reddit"><span>👽</span> Reddit</a>
-<a href="https://instagram.com/Broehoe93" target="_blank" class="btn" aria-label="Broehoe93 Instagram"><span>📸</span> Instagram</a>
-<a href="https://facebook.com/Broehoe93ic" target="_blank" class="btn" aria-label="Broehoe93 Facebook"><span>📘</span> Facebook</a>
+<a href="https://www.twitch.tv/broehoe93" target="_blank" class="btn"><span>🎥</span> Twitch</a>
+<a href="https://www.youtube.com/@Broehoe93/shorts" target="_blank" class="btn"><span>▶️</span> YouTube Shorts</a>
+<a href="https://www.tiktok.com/@broehoe.93" target="_blank" class="btn"><span>🎵</span> TikTok</a>
+<a href="https://www.instagram.com/broehoe/" target="_blank" class="btn"><span>📸</span> Instagram</a>
+<a href="https://www.facebook.com/Broehoe/" target="_blank" class="btn"><span>📘</span> Facebook</a>
+<a href="https://x.com/Broehoe93" target="_blank" class="btn"><span>🐦</span> X</a>
+<a href="https://www.reddit.com/user/broehoe93/" target="_blank" class="btn"><span>👽</span> Reddit</a>
+<a href="https://de.pinterest.com/Broehoe93/" target="_blank" class="btn"><span>📌</span> Pinterest</a>
+<a href="https://discord.gg/vqGXKbaayY" target="_blank" class="btn"><span>🎮</span> Discord</a>
 
-<footer><a href="/impressum.html" style="color:#888;">Impressum 👇</a></footer>
+<footer><a href="https://remarkable-beignet-e29a28.netlify.app/" style="color:#888;">Impressum 👇</a></footer>
 
 <script>
 for(let i=0;i<30;i++){
     let p=document.createElement('div');
     p.classList.add('particle');
-    p.style.left=Math.random()*100+'vw';
-    p.style.animationDuration=(3+Math.random()*5)+'s';
-    p.style.width=2+Math.random()*6+'px';
-    p.style.height=p.style.width;
+    p.style.left = Math.random() * 100 + 'vw';
+    p.style.animationDuration = (3 + Math.random() * 5) + 's';
+    p.style.width = 2 + Math.random() * 6 + 'px';
+    p.style.height = p.style.width;
     document.body.appendChild(p);
 }
 </script>
+
 </body>
 </html>
